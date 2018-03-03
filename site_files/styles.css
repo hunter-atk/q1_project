@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Fjalla+One|Gravitas+One|Josefin+Sans|Lato');
+
 html, body {height: 100%;}
-h1 {color: #c16886 !important; font-family: "Times New Roman", Times, serif !important; font-weight: bold !important;}
+h1 {color: #c16886 !important; font-family: "Josefin Sans" , "Times New Roman", Times, serif !important; font-weight: bold !important;}
 
 .utlogo {display: flex; justify-content: left; width: 135px; height: 35px; margin-left: 35px; margin-top: 20px; margin-bottom: 20px;}
 .accountLogo {display: flex; justify-content: left; width: 25px; height: 25px; margin-right: 4px;}
@@ -14,7 +16,7 @@ h1 {color: #c16886 !important; font-family: "Times New Roman", Times, serif !imp
 .uk-subnav-pill .uk-active a {background-color: white !important; color: black !important;}
 
 #switcher1 li {display: flex; justify-content: space-around;}
-#web_archive {font-family: "Times New Roman", Times, serif !important; font-size: 5em !important; text-shadow: 1px 0px 2px gray !important; font-weight: bold !important;}
+#web_archive {font-family: "Josefin Sans", "Times New Roman", Times !important; font-size: 5em !important; text-shadow: 1px 0px 2px gray !important;}
 #homeDescriptionSection {background-color: #232323; width: 100%; display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;}
 #homeDescription{display: flex; width: 70%; justify-content: center; color: gray; font-size: 1.2em; padding-top: 80px; padding-bottom: 80px;}
 #homeImageSection {height: 100%; display: flex; align-items: flex-start;}
