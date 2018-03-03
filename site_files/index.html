@@ -2,12 +2,15 @@
 <html>
 
 <head>
-	<title>[title TBD]</title>
+	<title>Fashioning Uganda: 20 years of Style in Africa's Pearl</title>
 	<link rel="stylesheet" type="text/css" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
-  <script src="scripts.js"></script>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<meta name="description" content="This website houses a digital archive of 6000 images of New Vision magazine, published in Uganda.">
 	<meta name="keywords" content="geography, university of texas, beauty, fashion, national science foundation, archive">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,26 +38,19 @@
   </div>
   </header>
 
-  <section id="homeImageSection" class="uk-background-cover uk-light uk-flex" uk-parallax="bgy: -450" style="background-image: url(homeBackground.jpeg);">
+  <section id="homeImageSection" class="uk-background-cover uk-light uk-flex" uk-parallax="bgy: -450" style="background-image: url(ugandaFashion2.jpg);">
     <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-        <h1 id="web_archive" uk-parallax="opacity: 0,1; y: 150,150; scale: 1,1; viewport: 0.5;" class=".uk-text-uppercase">WEB ARCHIVE</h1>
+        <h1 id="web_archive" uk-parallax="opacity: 0,1; y: 175,175; scale: 1,1; viewport: 0.5;" class=".uk-text-uppercase">Fashioning Uganda</h1>
     </div>
   </section>
   <section id="homeDescriptionSection">
-    <!-- <div id="homeDescription">
-      Welcome! This web archive contains 6000 images of New Vision Magazine, published in Uganda in the 2000s and 2010s.
-      Dr. Caroline Faria from the Department of Geography and the Environment at UT uses these images as data for her NSF
-      project on the beauty and fashion industry in Uganda. She has made these images available on this web site to
-      university students and faculty for their own research. Feel free to browse the web archive for images, or check
-      explore the site to learn more about Dr. Faria, her research, and UT's Feminist Geography Collective.
-    </div> -->
 
 		<article id="descriptionColumns">
 			<div id="first-column">
-				<h3>Lorem ipsun dolor sit amet lorem ipsum dolor sit amet.</h3><br>
+				<h3>20 YEARS OF STYLE IN UGANDA'S PEARL</h3><br>
 			</div>
 			<div id="second-column">
-				<p>Welcome! This web archive contains 6000 images of New Vision Magazine, published in Uganda in the 2000s and 2010s.
+				<p>Welcome! This web archive contains 6000 images of New Vision Magazine, published in Uganda in the 90s and 00s.
         Dr. Caroline Faria from the Department of Geography and the Environment at UT uses these images as data for her NSF
         project on the beauty and fashion industry in Uganda. She has made these images available on this web site to
         university students and faculty for their own research. Feel free to browse the web archive for images, or check
@@ -64,20 +60,6 @@
   </section>
 
     <section id="aboutTextSection">
-
-      <!-- <div id="aboutResearchText">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
-      <h1>
-        About UT's Feminist Geography Collective
-      </h1>
-      <div id="aboutResearchText">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div> -->
       <div id="switcherContainer">
         <h1>
           About our work...
@@ -99,6 +81,20 @@
       </ul>
     </div>
     </section>
+		<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBEuz8CjkppEfcz-i1el4YgzS6VudEdqnY",
+        authDomain: "q1-project-77b24.firebaseapp.com",
+        databaseURL: "https://q1-project-77b24.firebaseio.com",
+        projectId: "q1-project-77b24",
+        storageBucket: "q1-project-77b24.appspot.com",
+        messagingSenderId: "323670236834"
+      };
+      firebase.initializeApp(config);
+    </script>
+	  <script src="scripts.js"></script>
 </body>
 
 <footer>

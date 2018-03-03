@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Fjalla+One|Gravitas+One|Josefin+Sans|Lato');
 
 html, body {height: 100%;}
-h1 {color: #c16886 !important; font-family: "Josefin Sans" , "Times New Roman", Times, serif !important; font-weight: bold !important;}
-
+h1 {color: #092072 !important; font-family: "Josefin Sans" , "Times New Roman", Times, serif !important; font-weight: bold !important;}
+/* #c16886 */
 .utlogo {display: flex; justify-content: left; width: 135px; height: 35px; margin-left: 35px; margin-top: 20px; margin-bottom: 20px;}
 .accountLogo {display: flex; justify-content: left; width: 25px; height: 25px; margin-right: 4px;}
 .accountLoginContainer {display: flex; justify-content: flex-end; align-items: center; margin-right: 35px;}
@@ -14,14 +14,20 @@ h1 {color: #c16886 !important; font-family: "Josefin Sans" , "Times New Roman", 
 .copyrightText {display: flex; justify-content: center; align-items: center; font-size: 0.9em}
 .darkGrayText {text-decoration-color: red;}
 .uk-subnav-pill .uk-active a {background-color: white !important; color: black !important;}
+/* .container {padding: 1rem;} */
 
 #switcher1 li {display: flex; justify-content: space-around;}
-#web_archive {font-family: "Josefin Sans", "Times New Roman", Times !important; font-size: 5em !important; text-shadow: 1px 0px 2px gray !important;}
+#web_archive {font-family: "Josefin Sans", "Times New Roman", Times !important; font-size: 5.5em !important;
+ text-shadow: 3px -3px 150px gray !important; display: inline-block !important; white-space: nowrap !important;
+}
+#web_archive2 {font-family: "Josefin Sans", "Times New Roman", Times !important; font-size: 2.5em !important;
+ text-shadow: 3px -3px 150px gray !important; display: inline-block !important; color: #c16886 !important;
+}
 #homeDescriptionSection {background-color: #232323; width: 100%; display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;}
 #homeDescription{display: flex; width: 70%; justify-content: center; color: gray; font-size: 1.2em; padding-top: 80px; padding-bottom: 80px;}
 #homeImageSection {height: 100%; display: flex; align-items: flex-start;}
 #aboutTextSection { width: 70%; margin-left: 15%; display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;}
-#first-column { width: 15%; margin-left: 15%;}
+#first-column { width: 15%; margin-left: 15%; display: flex; justify-content: flex-end; text-align: right; margin-right: 30px;}
 #second-column { width: 55%;}
 #descriptionColumns {display: flex; flex-wrap: nowrap; margin: 50px 0 30px 0;}
 #switcherContainer {display: flex; justify-content: space-between; flex-wrap: wrap; margin: 30px 0 30px 0;}

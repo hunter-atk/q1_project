@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>[title TBD]</title>
+	<title>Admin Console</title>
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
@@ -36,22 +36,44 @@
       <div>
     </nav>
   </header>
-  <h1>
-    [Title of Ditigal Archive TBD]
-  </h1>
-  <section id="archiveContainer">
-    <div id="archiveSearchContainer">
-      <input id="dataRange">
-       </input>
-      <input id="sortBy">
-       </input>
-      <input id="searchBar">
-       </input>
-      <input id="searchSubmit" type="submit">
-       </input>
+
+	<section>
+	<div class="container">
+    <div class="row">
+      <div class="col-sx-12">
+        <form class="js-form">
+          <div class="form-group">
+            <label for="js-email">Email</label>
+            <input type="email" id="js-email" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <div id="js-login-data">
+            <label for="js-password">Password</label>
+            <input type="password" id="js-password" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="js-image-id">Image ID</label>
+            <input type="text" id="js-image-id" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="js-image-date">Image Date</label>
+            <input type="date" id="js-image-date" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="js-image-keywords">Keywords (separated by spaces)</label>
+            <input type="text" id="js-image-keywords" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="js-image-upload">Upload Image</label>
+            <input type="file" value="upload" id="js-image-uploaf" class="form-control"/>
+          </div>
+          </div>
+          <button id="js-submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
     </div>
-  </section>
-	
+  </div>
+</section>
 <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 <script>
 // Initialize Firebase
