@@ -15,6 +15,15 @@ $(function () {
   // }
     var fileName;
 
+    //Image Upload
+    var imageUpload = document.getElementById('js-image-upload');
+    imageUpload.addEventListener('change', function(e){
+      var file = e.target.files[0];
+      fileName = file.name;
+      var storageRef = firebase.storage().ref('images/' + file.name);
+      storageRef.put(file);
+    })
+
   $('.js-form').on('submit', event => {
     event.preventDefault();
 
@@ -26,14 +35,7 @@ $(function () {
     const imageDate = $('#js-image-date').val();
     const imageKeywords = $('#js-image-keywords').val().split(" ");
 
-    //Image Upload
-    var imageUpload = document.getElementById('js-image-upload');
-    imageUpload.addEventListener('change', function(e){
-      var file = e.target.files[0];
-      fileName = file.name;
-      var storageRef = firebase.storage().ref('images/' + file.name);
-      storageRef.put(file);
-    })
+
 
     firebase.auth().signInWithEmailAndPassword(email, password)
           .then(user => {
