@@ -1,28 +1,35 @@
-@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Fjalla+One|Gravitas+One|Josefin+Sans|Lato');
+@import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Fjalla+One|Gravitas+One|Montserrat|Josefin+Sans|Abril+Fatface|Comfortaa|Fredoka+One|Passion+One|Shrikhand');
 
 html, body {height: 100%;}
-h1 {color: #092072 !important; font-family: "Josefin Sans" , "Times New Roman", Times, serif !important; font-weight: bold !important;}
+h1 {color: #092072 !important; font-family: "Comfortaa" , "Times New Roman", Times, serif !important; }
 /* #c16886 */
-.utlogo {display: flex; justify-content: left; width: 135px; height: 35px; margin-left: 35px; margin-top: 20px; margin-bottom: 20px;}
-.accountLogo {display: flex; justify-content: left; width: 25px; height: 25px; margin-right: 4px;}
+nav {background-color: white !important;}
+ p, a {font-family: "Montserrat", "Arial", "Times New Roman" !important;}
+
+#collectiveWebsite {color: #e52441 !important;}
+.utlogo {display: flex; justify-content: left; width: 300px; height: 50px; margin-left: 30px; margin-top: 10px; margin-bottom: 5px;}
+.accountLogo {display: flex; justify-content: left; width: 20px; height: 20px; margin-right: 6px;}
 .accountLoginContainer {display: flex; justify-content: flex-end; align-items: center; margin-right: 35px;}
 .uk-navbar-container {display: flex; justify-content: space-between;}
-.contactContainer {display: flex; align-items: center; justify-content: space-between; width: 100%; height: auto; background-color: #F2F1F1; padding: 30px 0 30px 0; }
-.contactEmails {width: 35%; margin-left: 15%; display: flex; justify-content: flex-start;}
-.contactLinks {width: 35%; margin-right: 15%; display: flex; justify-content: flex-end;}
+.contact {display: flex; align-items: flex-start;}
+.contactContainer {display: flex; align-items: flex-start; justify-content: space-between; width: 100%; height: auto; background-color: #232323; padding: 30px 0 30px 0; }
+.contactEmails {width: 25%; margin-left: 8%; display: flex; justify-content: flex-start;}
+.contactLinks {width: 25%; margin-right: 8%; display: flex; justify-content: flex-start;}
+.webMasterEmail {width: 25%; margin-left: 4%; display: flex; justify-content: flex-start; }
 .copyright {justify-content: center; background-color: black; padding: 15px, 5px, 15px, 5px;}
 .copyrightText {display: flex; justify-content: center; align-items: center; font-size: 0.9em}
 .darkGrayText {text-decoration-color: red;}
 .uk-subnav-pill .uk-active a {background-color: white !important; color: black !important;}
-/* .container {padding: 1rem;} */
+hr.style2 {border-top: 3px double #8c8b8b !important;}
+.staticParallax { background-image: url("ugandaFashion3.png"); height: 100%; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
+.staticParallax2 { background-image: url("homeBackground.jpeg"); height: 500px; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
+.staticParallax3 { background-image: url("ugandaFashion.jpg"); height: 70%; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
 
+/* .container {padding: 1rem;} */
+#descriptionAside {font-family: "Abril Fatface"; margin-top: -10px;}
 #switcher1 li {display: flex; justify-content: space-around;}
-#web_archive {font-family: "Josefin Sans", "Times New Roman", Times !important; font-size: 5.5em !important;
- text-shadow: 3px -3px 150px gray !important; display: inline-block !important; white-space: nowrap !important;
-}
-#web_archive2 {font-family: "Josefin Sans", "Times New Roman", Times !important; font-size: 2.5em !important;
- text-shadow: 3px -3px 150px gray !important; display: inline-block !important; color: #c16886 !important;
-}
+#web_archive {font-family: "Abril Fatface", "Times New Roman", Times !important; font-size: 4.5em !important; display: inline-block !important; white-space: wrap !important; width: 40%;}
+#web_archive2 {font-family: "Comfortaa", "Times New Roman", Times !important; font-size: 1.5em !important; display: inline-block !important; white-space: wrap !important; width: 60%; color: #e52441 !important;}
 #homeDescriptionSection {background-color: #232323; width: 100%; display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;}
 #homeDescription{display: flex; width: 70%; justify-content: center; color: gray; font-size: 1.2em; padding-top: 80px; padding-bottom: 80px;}
 #homeImageSection {height: 100%; display: flex; align-items: flex-start;}

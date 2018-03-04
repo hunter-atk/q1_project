@@ -25,7 +25,7 @@
       <div class="uk-navbar-center">
       <ul class="uk-navbar-nav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#aboutTextSection">About</a></li>
+        <li><a href="index.html#second-column">About</a></li>
         <li class="uk-active"><a href="archive.html">Archive</a></li>
         <!-- <li><a href="contact.html">Contact</a></li> -->
       </ul>
@@ -36,9 +36,10 @@
       <div>
     </nav>
   </header>
-  <h1>
-    [Title of Ditigal Archive TBD]
-  </h1>
+	<div class="staticParallax2"><h1>
+    Web Archive of New Vision Magazine Images
+  </h1></div>
+
   <section id="archiveContainer">
     <div id="archiveSearchContainer">
       <input id="dataRange">
@@ -51,7 +52,7 @@
        </input>
     </div>
   </section>
-	
+
 <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 <script>
 // Initialize Firebase
@@ -70,25 +71,38 @@
 
 <footer>
   <section class="contactContainer">
+		<div class="contact">
+
+		</div>
     <div class="contactEmails">
-      <h3>Contact</h3>
       <span>
-        <strong>Dr. Caroline Faria</strong> <br>
+        <p><strong>Dr. Caroline Faria</strong> <br><br>
         Assistant Professor <br>
         Department of Geography & the Environment <br>
-        University of Texas <br><br>
+        University of Texas <br>
         cvfaria@austin.utexas.edu
+			</p>
       </span>
     </div>
+		<div class="webMasterEmail">
+			<span>
+			<p><strong>Hunter Jefferson</strong><br><br>
+			Web Developer & <br>
+			Research Assistant<br>
+			hunterjefferson@utexas.edu<br>
+			&nbsp;
+		</p>
+		</span>
+		</div>
     <div class="contactLinks">
-      <h3>Visit the Collective's <a href="https://universityoftexas.wixsite.com/femgeogcollective">website</a> to learn more about our work</h3>
+      <h2 style="font-family: Comfortaa;">Visit the Collective's <a id="collectiveWebsite" href="https://universityoftexas.wixsite.com/femgeogcollective">website</a> to learn more about our work</h2>
       <span>
 
       </span>
     </div>
   </section>
   <section class="copyright" style="">
-  <p class="copyrightText"> &copy; 2018 Hunter Jefferson. All rights reserved. | Austin, TX </p>
+  <div class="copyrightText">&copy; 2018 UT Feminist Geography Collective. All rights reserved. | Austin, TX </div>
  </section>
 </footer>
 

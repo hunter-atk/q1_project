@@ -13,9 +13,11 @@ $(function () {
   //   email: "",
   //   password: "",
   // }
+    var fileName;
 
   $('.js-form').on('submit', event => {
     event.preventDefault();
+
     // const email = $('#js-email').val() || state.email;
     const email = $('#js-email').val();
     // const password = $('#js-password').val() || state.password;
@@ -24,13 +26,22 @@ $(function () {
     const imageDate = $('#js-image-date').val();
     const imageKeywords = $('#js-image-keywords').val().split(" ");
 
+    //Image Upload
+    var imageUpload = document.getElementById('js-image-upload');
+    imageUpload.addEventListener('change', function(e){
+      var file = e.target.files[0];
+      fileName = file.name;
+      var storageRef = firebase.storage().ref('images/' + file.name);
+      storageRef.put(file);
+    })
+
     firebase.auth().signInWithEmailAndPassword(email, password)
           .then(user => {
             // state.email = email;
             // state.password = password;
             // $('#js-login-data').addClass('hidden');
             firebase.database().ref('images').push({
-                imageID, imageDate, imageKeywords
+                imageID, imageDate, imageKeywords, fileName
               });
               console.log(imageID, imageDate, imageKeywords);
               $('.js-form').trigger('reset');
