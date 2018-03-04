@@ -22,13 +22,18 @@ nav {background-color: white !important;}
 .uk-subnav-pill .uk-active a {background-color: white !important; color: black !important;}
 hr.style2 {border-top: 3px double #8c8b8b !important;}
 .staticParallax { background-image: url("ugandaFashion3.png"); height: 100%; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
-.staticParallax2 { background-image: url("homeBackground.jpeg"); height: 500px; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
+.staticParallax2 { background-image: url("homeBackground.jpeg"); height: 500px; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; justify-content: center; align-items: center;}
 .staticParallax3 { background-image: url("ugandaFashion.jpg"); height: 70%; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
+.tint {z-index: 1; position: absolute; top: 65px; left: 0px; height: 460px; background: rgba(0, 0, 0, 0.7); display: flex; align-items: center;}
+.white-text {color: white;}
+.dark-background {background-color: #232323 !important;}
 
 /* .container {padding: 1rem;} */
 #descriptionAside {font-family: "Abril Fatface"; margin-top: -10px;}
 #switcher1 li {display: flex; justify-content: space-around;}
-#web_archive {font-family: "Abril Fatface", "Times New Roman", Times !important; font-size: 4.5em !important; display: inline-block !important; white-space: wrap !important; width: 40%;}
+.web_archive {font-family: "Abril Fatface", "Times New Roman", Times !important; font-size: 4.5em !important; display: inline-block !important; white-space: wrap !important; width: 40%;}
+#archive_header {display: flex; justify-content: center; align-items: center; font-size: 4.5em; font-family: "Montserrat", "Times New Roman"; width: 80%; margin-left: 10%; text-align: center; color: #bb5522; font-style: bold;}
+#archive_header_container {width: 100%; padding: 20px 0 20px 0;}
 #web_archive2 {font-family: "Comfortaa", "Times New Roman", Times !important; font-size: 1.5em !important; display: inline-block !important; white-space: wrap !important; width: 60%; color: #e52441 !important;}
 #homeDescriptionSection {background-color: #232323; width: 100%; display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;}
 #homeDescription{display: flex; width: 70%; justify-content: center; color: gray; font-size: 1.2em; padding-top: 80px; padding-bottom: 80px;}
@@ -39,3 +44,4 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
 #descriptionColumns {display: flex; flex-wrap: nowrap; margin: 50px 0 30px 0;}
 #switcherContainer {display: flex; justify-content: space-between; flex-wrap: wrap; margin: 30px 0 30px 0;}
 #switcherContainer h1 {display: flex; justify-content: center; width: 100%;}
+#collectiveWebsitePink {color: #bb5522;}
