@@ -1,18 +1,18 @@
-$(function () {
-  const config = {
-    apiKey: "AIzaSyBEuz8CjkppEfcz-i1el4YgzS6VudEdqnY",
-    authDomain: "q1-project-77b24.firebaseapp.com",
-    databaseURL: "https://q1-project-77b24.firebaseio.com",
-    projectId: "q1-project-77b24",
-    storageBucket: "q1-project-77b24.appspot.com",
-    messagingSenderId: "323670236834"
-  };
-  firebase.initializeApp(config);
+const config = {
+  apiKey: "AIzaSyBEuz8CjkppEfcz-i1el4YgzS6VudEdqnY",
+  authDomain: "q1-project-77b24.firebaseapp.com",
+  databaseURL: "https://q1-project-77b24.firebaseio.com",
+  projectId: "q1-project-77b24",
+  storageBucket: "q1-project-77b24.appspot.com",
+  messagingSenderId: "323670236834"
+};
+firebase.initializeApp(config);
 
-  // const state = {
-  //   email: "",
-  //   password: "",
-  // }
+$(function () {
+  const state = {
+    email: "",
+    password: "",
+  }
     var fileName;
 
     //Image Upload
@@ -27,10 +27,10 @@ $(function () {
   $('.js-form').on('submit', event => {
     event.preventDefault();
 
-    // const email = $('#js-email').val() || state.email;
-    const email = $('#js-email').val();
-    // const password = $('#js-password').val() || state.password;
-    const password = $('#js-password').val();
+    const email = $('#js-email').val() || state.email;
+    //const email = $('#js-email').val();
+    const password = $('#js-password').val() || state.password;
+    //const password = $('#js-password').val();
     const imageID = $('#js-image-id').val();
     const imageDate = $('#js-image-date').val();
     const imageKeywords = $('#js-image-keywords').val().split(" ");
@@ -39,9 +39,10 @@ $(function () {
 
     firebase.auth().signInWithEmailAndPassword(email, password)
           .then(user => {
-            // state.email = email;
-            // state.password = password;
-            // $('#js-login-data').addClass('hidden');
+            state.email = email;
+            state.password = password;
+            $('#js-login-data').addClass('hidden');
+            //$('#js-email').addClass('hidden');
             firebase.database().ref('images').push({
                 imageID, imageDate, imageKeywords, fileName
               });
@@ -53,3 +54,8 @@ $(function () {
           });
   });
 });
+
+function getData(){
+  var resultsContainer = document.getElementById('archiveResultsContainer');
+  var result
+}

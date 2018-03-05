@@ -27,6 +27,7 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
 .tint {z-index: 1; position: absolute; top: 65px; left: 0px; height: 460px; background: rgba(0, 0, 0, 0.7); display: flex; align-items: center;}
 .white-text {color: white;}
 .dark-background {background-color: #232323 !important;}
+.hidden {display: none;}
 
 /* .container {padding: 1rem;} */
 #descriptionAside {font-family: "Abril Fatface"; margin-top: -10px;}
