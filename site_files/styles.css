@@ -34,7 +34,7 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
 /* .container {padding: 1rem;} */
 /* #archiveContainer {display: flex !important;} */
 #collectiveWebsite {color: #e52441 !important;}
-#descriptionAside {font-family: "Abril Fatface"; margin-top: -10px;}
+#descriptionAside {font-family: "Montserrat";}
 #switcher1 li {display: flex; justify-content: space-around;}
 #archive_header {display: flex; justify-content: center; align-items: center; font-size: 4.5em; font-family: "Montserrat", "Times New Roman"; width: 80%; margin-left: 10%; text-align: center; color: #bb5522; font-style: bold;}
 #archive_header_container {width: 100%; padding: 20px 0 20px 0;}
