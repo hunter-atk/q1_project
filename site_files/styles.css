@@ -5,6 +5,7 @@ h1 {color: #092072 !important; font-family: "Comfortaa" , "Times New Roman", Tim
 /* #c16886 */
 nav {background-color: white !important;}
 p, a {font-family: "Montserrat", "Arial", "Times New Roman" !important;}
+ul li {font-family: "Montserrat" !important;}
 
 hr.style2 {border-top: 3px double #8c8b8b !important;}
 .utlogo {display: flex; justify-content: left; width: 300px; height: 50px; margin-left: 30px; margin-top: 10px; margin-bottom: 5px;}
