@@ -33,6 +33,7 @@ $(function () {
     //const password = $('#js-password').val();
     const imageID = $('#js-image-id').val();
     const imageDate = $('#js-image-date').val();
+    const dateInt = new Date(imageDate).getTime();
     const imageKeywords = $('#js-image-keywords').val().split(" ");
 
 
@@ -44,7 +45,7 @@ $(function () {
             $('#js-login-data').addClass('hidden');
             //$('#js-email').addClass('hidden');
             firebase.database().ref('images').push({
-                imageID, imageDate, imageKeywords, fileName
+                imageID, imageDate, dateInt, imageKeywords, fileName
               });
               console.log(imageID, imageDate, imageKeywords);
               $('.js-form').trigger('reset');
