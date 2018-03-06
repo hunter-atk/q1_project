@@ -4,9 +4,9 @@ html, body {height: 100%;}
 h1 {color: #092072 !important; font-family: "Comfortaa" , "Times New Roman", Times, serif !important; }
 /* #c16886 */
 nav {background-color: white !important;}
- p, a {font-family: "Montserrat", "Arial", "Times New Roman" !important;}
+p, a {font-family: "Montserrat", "Arial", "Times New Roman" !important;}
 
-#collectiveWebsite {color: #e52441 !important;}
+hr.style2 {border-top: 3px double #8c8b8b !important;}
 .utlogo {display: flex; justify-content: left; width: 300px; height: 50px; margin-left: 30px; margin-top: 10px; margin-bottom: 5px;}
 .accountLogo {display: flex; justify-content: left; width: 20px; height: 20px; margin-right: 6px;}
 .accountLoginContainer {display: flex; justify-content: flex-end; align-items: center; margin-right: 35px;}
@@ -20,7 +20,6 @@ nav {background-color: white !important;}
 .copyrightText {display: flex; justify-content: center; align-items: center; font-size: 0.9em}
 .darkGrayText {text-decoration-color: red;}
 .uk-subnav-pill .uk-active a {background-color: white !important; color: black !important;}
-hr.style2 {border-top: 3px double #8c8b8b !important;}
 .staticParallax { background-image: url("ugandaFashion3.png"); height: 100%; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
 .staticParallax2 { background-image: url("homeBackground.jpeg"); height: 500px; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; justify-content: center; align-items: center;}
 .staticParallax3 { background-image: url("ugandaFashion.jpg"); height: 70%; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
@@ -28,13 +27,18 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
 .white-text {color: white;}
 .dark-background {background-color: #232323 !important;}
 .hidden {display: none;}
+.imgThumbnail {width: 350px; height: 220px;}
+.newResultContainer {}
+.web_archive {font-family: "Abril Fatface", "Times New Roman", Times !important; font-size: 4.5em !important; display: inline-block !important; white-space: wrap !important; width: 40%;}
 
 /* .container {padding: 1rem;} */
+/* #archiveContainer {display: flex !important;} */
+#collectiveWebsite {color: #e52441 !important;}
 #descriptionAside {font-family: "Abril Fatface"; margin-top: -10px;}
 #switcher1 li {display: flex; justify-content: space-around;}
-.web_archive {font-family: "Abril Fatface", "Times New Roman", Times !important; font-size: 4.5em !important; display: inline-block !important; white-space: wrap !important; width: 40%;}
 #archive_header {display: flex; justify-content: center; align-items: center; font-size: 4.5em; font-family: "Montserrat", "Times New Roman"; width: 80%; margin-left: 10%; text-align: center; color: #bb5522; font-style: bold;}
 #archive_header_container {width: 100%; padding: 20px 0 20px 0;}
+#archiveResultsContainer {display: grid; grid-template-columns: repeat(3, 1fr); grid-column-gap: 50px; grid-row-gap: 50px; max-width: 100%; margin-left: 5%; padding: 20px 0 20px 20px;}
 #web_archive2 {font-family: "Comfortaa", "Times New Roman", Times !important; font-size: 1.5em !important; display: inline-block !important; white-space: wrap !important; width: 60%; color: #e52441 !important;}
 #homeDescriptionSection {background-color: #232323; width: 100%; display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;}
 #homeDescription{display: flex; width: 70%; justify-content: center; color: gray; font-size: 1.2em; padding-top: 80px; padding-bottom: 80px;}
