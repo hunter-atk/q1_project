@@ -7,6 +7,7 @@ const config = {
   messagingSenderId: "323670236834"
 };
 var archiveResultsContainer = document.getElementsByClassName("archiveResultsContainer")[0];
+archiveResultsContainer.setAttribute("uk-scrollspy", "target: > div; cls:uk-animation-fade; delay: 500")
 firebase.initializeApp(config);
 
 //reference image storage and doc elements
@@ -30,16 +31,69 @@ function returnResults(){
   //helper function to add new img and tag html to archiveResultsContainer
   function addImageResult(storedImage, imageId, imageDate){
     var newResult = document.createElement("div");
-    newResult.setAttribute("class", "newResultContainer");
+    newResult.setAttribute("class", "newResultContainer uk-card uk-card-default uk-card-body");
+    archiveResultsContainer.setAttribute("uk-lightbox", "animation: fade");
     archiveResultsContainer.appendChild(newResult);
     var newImageResult = document.createElement("img");
+    var newImageAnchor = document.createElement("a");
     var newImageMetadata = document.createElement("div");
     newImageResult.setAttribute("src", storedImage);
     newImageResult.setAttribute("class", "imgThumbnail");
+    newImageAnchor.setAttribute("data-type", "image");
+    newImageAnchor.setAttribute("href", storedImage);
+    newImageAnchor.setAttribute("class", "uk-inline uk-button uk-button-default");
+    newImageAnchor.setAttribute("data-caption", (imageDate + ",  " + imageId));
     newImageMetadata.setAttribute("class", "imgMetadata");
-    newResult.appendChild(newImageResult);
+    newImageAnchor.appendChild(newImageResult);
+    newResult.appendChild(newImageAnchor);
     newResult.appendChild(newImageMetadata);
     appendMetadata(imageId, imageDate, newImageResult, newImageMetadata);
+    // newImageResult.addEventListener("click", function(ev){
+    //   setTimeout(function(){
+    //     var angle = 0;
+    //     var allImages = document.getElementsByClassName("uk-active")[2].firstChild;
+    //     allImages.addEventListener("click", function(ev){
+    //       angle = (angle + 90) % 360;
+    //       allImages.className = "rotate" + angle;
+    //     console.log(allImages);
+    //     })
+    //   }, 500)
+    // })
+    newImageResult.addEventListener("click", function(ev){
+      setTimeout(function(){
+        var rotated = false;
+        var allImages = document.getElementsByClassName("uk-active")[2].firstChild;
+        allImages.addEventListener("click", function(ev){
+          var deg = rotated ? 0 : 90;
+
+          allImages.style.webkitTransform = 'rotate('+deg+'deg)';
+          allImages.style.mozTransform    = 'rotate('+deg+'deg)';
+          allImages.style.msTransform     = 'rotate('+deg+'deg)';
+          allImages.style.oTransform      = 'rotate('+deg+'deg)';
+          allImages.style.transform       = 'rotate('+deg+'deg)';
+
+          rotated = !rotated;
+        })
+      }, 500)
+    })
+    var lightboxButton = document.getElementsByClassName("uk-lightbox-button");
+    lightboxButton.addEventListener("click", function(ev){
+      setTimeout(function(){
+        var rotated = false;
+        var allImages = document.getElementsByClassName("uk-active")[2].firstChild;
+        allImages.addEventListener("click", function(ev){
+          var deg = rotated ? 0 : 90;
+
+          allImages.style.webkitTransform = 'rotate('+deg+'deg)';
+          allImages.style.mozTransform    = 'rotate('+deg+'deg)';
+          allImages.style.msTransform     = 'rotate('+deg+'deg)';
+          allImages.style.oTransform      = 'rotate('+deg+'deg)';
+          allImages.style.transform       = 'rotate('+deg+'deg)';
+
+          rotated = !rotated;
+        })
+      }, 500)
+    })
   }
 
 
@@ -90,14 +144,22 @@ function returnSearchResults(){
   //helper function to add new img and tag html to archiveResultsContainer
   function addImageResult(storedImage, imageId, imageDate){
     var newResult = document.createElement("div");
-    newResult.setAttribute("class", "newResultContainer");
+    newResult.setAttribute("class", "newResultContainer uk-card uk-card-default uk-card-body");
+    archiveResultsContainer.setAttribute("uk-lightbox", "animation: fade");
     archiveResultsContainer.appendChild(newResult);
     var newImageResult = document.createElement("img");
+    var newImageAnchor = document.createElement("a");
     var newImageMetadata = document.createElement("div");
     newImageResult.setAttribute("src", storedImage);
+    console.log(storedImage);
     newImageResult.setAttribute("class", "imgThumbnail");
+    newImageAnchor.setAttribute("data-type", "image");
+    newImageAnchor.setAttribute("href", storedImage);
+    newImageAnchor.setAttribute("class", "uk-inline uk-button uk-button-default");
+    newImageAnchor.setAttribute("data-caption", (imageDate + ",  " + imageId));
     newImageMetadata.setAttribute("class", "imgMetadata");
-    newResult.appendChild(newImageResult);
+    newImageAnchor.appendChild(newImageResult);
+    newResult.appendChild(newImageAnchor);
     newResult.appendChild(newImageMetadata);
     appendMetadata(imageId, imageDate, newImageResult, newImageMetadata);
   }

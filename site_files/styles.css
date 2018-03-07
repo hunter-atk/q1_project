@@ -4,14 +4,17 @@ html, body {height: 100%;}
 h1 {color: #092072 !important; font-family: "Comfortaa" , "Times New Roman", Times, serif !important; }
 /* #c16886 */
 nav {background-color: white !important;}
+img {image-orientation: from-image !important;}
 p, a {font-family: "Montserrat", "Arial", "Times New Roman" !important;}
 ul li {font-family: "Montserrat" !important;}
-
+.inputStyle {border: 1px solid #c4c4c4; border-radius: 5px; background-color: #fff; padding: 3px 5px; box-shadow: inset 0 3px 6px rgba(0,0,0,0.1); width: 190px; height: 25px;
+}
 hr.style2 {border-top: 3px double #8c8b8b !important;}
-.utlogo {display: flex; justify-content: left; width: 300px; height: 50px; margin-left: 30px; margin-top: 10px; margin-bottom: 5px;}
+.utlogo {display: flex; justify-content: left; width: 220px; height: 50px; margin-left: 30px; margin-top: 10px; margin-bottom: 5px;}
 .accountLogo {display: flex; justify-content: left; width: 20px; height: 20px; margin-right: 6px;}
 .accountLoginContainer {display: flex; justify-content: flex-end; align-items: center; margin-right: 35px;}
 .uk-navbar-container {display: flex; justify-content: space-between;}
+.uk-navbar-center {display: flex; justify-content: center !important;}
 .contact {display: flex; align-items: flex-start;}
 .contactContainer {display: flex; align-items: flex-start; justify-content: space-between; width: 100%; height: auto; background-color: #232323; padding: 30px 0 30px 0; }
 .contactEmails {width: 25%; margin-left: 8%; display: flex; justify-content: flex-start;}
@@ -22,32 +25,96 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
 .darkGrayText {text-decoration-color: red;}
 .uk-subnav-pill .uk-active a {background-color: white !important; color: black !important;}
 .staticParallax { background-image: url("ugandaFashion3.png"); height: 100%; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
-.staticParallax2 { background-image: url("homeBackground.jpeg"); height: 500px; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; justify-content: center; align-items: center;}
+.staticParallax2 { background-image: url("homeBackground.jpeg"); height: 300px; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; justify-content: center; align-items: center;}
 .staticParallax3 { background-image: url("ugandaFashion.jpg"); height: 70%; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
-.tint {z-index: 1; position: absolute; top: 65px; left: 0px; height: 460px; background: rgba(0, 0, 0, 0.7); display: flex; align-items: center;}
+.tint {z-index: 1; position: absolute; top: 65px; left: 0px; height: 260px; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center;}
 .white-text {color: white;}
 .dark-background {background-color: #232323 !important;}
 .hidden {display: none;}
-.imgThumbnail {width: 350px; height: 220px;}
+/* .imgThumbnail {width: 550px; height: 220px;} */
 .newResultContainer {}
 .web_archive {font-family: "Abril Fatface", "Times New Roman", Times !important; font-size: 4.5em !important; display: inline-block !important; white-space: wrap !important; width: 40%;}
+.magImageBackground {background-image: url("homeBackground.jpeg");}
+/* .searchBarDiv {margin-right: 70px;} */
 
 /* .container {padding: 1rem;} */
 /* #archiveContainer {display: flex !important;} */
 #collectiveWebsite {color: #e52441 !important;}
 #descriptionAside {font-family: "Montserrat";}
-#switcher1 li {display: flex; justify-content: space-around;}
-#archive_header {display: flex; justify-content: center; align-items: center; font-size: 4.5em; font-family: "Montserrat", "Times New Roman"; width: 80%; margin-left: 10%; text-align: center; color: #bb5522; font-style: bold;}
+#switcher1 li {display: inline-block; white-space: nowrap;}
+#archive_header {display: flex; justify-content: center; align-items: center; font-size: 5em; font-family: "Josefin Sans", "Times New Roman"; width: 80%; margin-left: 10%; text-align: center; color: white; font-style: bold;}
 #archive_header_container {width: 100%; padding: 20px 0 20px 0;}
-.archiveResultsContainer {display: grid; grid-template-columns: repeat(3, 1fr); grid-column-gap: 50px; grid-row-gap: 50px; max-width: 100%; margin-left: 5%; padding: 20px 0 20px 20px;}
+#archiveSearchForm {display: flex; justify-content: center; align-items: center; width: 100%;}
+#archiveSearchContainer {display: flex; justify-content: center; align-items: center; height: 50px;}
+.archiveResultsContainer {display: grid; grid-template-columns: repeat(3, 1fr); grid-column-gap: 50px; grid-row-gap: 50px; max-width: 100%; padding: 10px 10px 10px 10px;}
 #web_archive2 {font-family: "Comfortaa", "Times New Roman", Times !important; font-size: 1.5em !important; display: inline-block !important; white-space: wrap !important; width: 60%; color: #e52441 !important;}
 #homeDescriptionSection {background-color: #232323; width: 100%; display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;}
 #homeDescription{display: flex; width: 70%; justify-content: center; color: gray; font-size: 1.2em; padding-top: 80px; padding-bottom: 80px;}
 #homeImageSection {height: 100%; display: flex; align-items: flex-start;}
-#aboutTextSection { width: 70%; margin-left: 15%; display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;}
-#first-column { width: 15%; margin-left: 15%; display: flex; justify-content: flex-end; text-align: right; margin-right: 30px;}
+#aboutTextSection { width: 74%; margin-left: 13%; display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;}
+#first-column { width: 15%; margin-left: 13%; display: flex; justify-content: flex-end; text-align: right; margin-right: 30px;}
 #second-column { width: 55%;}
 #descriptionColumns {display: flex; flex-wrap: nowrap; margin: 50px 0 30px 0;}
 #switcherContainer {display: flex; justify-content: space-between; flex-wrap: wrap; margin: 30px 0 30px 0;}
 #switcherContainer h1 {display: flex; justify-content: center; width: 100%;}
 #collectiveWebsitePink {color: #bb5522;}
+#searchBar {width: 30%; -webkit-transition: width 0.4s ease-in-out; transition: width 0.4s ease-in-out;}
+/* #searchBar:focus {width: 30%;} */
+#searchSubmit {height: 35px;}
+
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+  font-family: "Montserrat";
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+  font-family: "Montserrat";
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  font-family: "Montserrat";
+}
+
+input[type=submit] {
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-family: "Montserrat";
+}
+
+#container {
+  width: 820px;
+  height: 100px;
+  overflow: hidden;
+}
+#container.rotate90,
+#container.rotate270 {
+  width: 100px;
+  height: 820px
+}
+#image {
+  transform-origin: top left;
+  /* IE 10+, Firefox, etc. */
+  -webkit-transform-origin: top left;
+  /* Chrome */
+  -ms-transform-origin: top left;
+  /* IE 9 */
+}
+#container.rotate90 #image {
+  transform: rotate(90deg) translateY(-100%);
+  -webkit-transform: rotate(90deg) translateY(-100%);
+  -ms-transform: rotate(90deg) translateY(-100%);
+}
+#container.rotate180 #image {
+  transform: rotate(180deg) translate(-100%, -100%);
+  -webkit-transform: rotate(180deg) translate(-100%, -100%);
+  -ms-transform: rotate(180deg) translateX(-100%, -100%);
+}
+#container.rotate270 #image {
+  transform: rotate(270deg) translateX(-100%);
+  -webkit-transform: rotate(270deg) translateX(-100%);
+  -ms-transform: rotate(270deg) translateX(-100%);
+}
