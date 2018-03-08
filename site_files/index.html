@@ -8,23 +8,20 @@
 	<link rel="stylesheet" type="text/css" href="uikit-3.0.0-beta.40/css/uikit.min.css" />
 	<link rel="stylesheet" type="text/css" href="uikit-3.0.0-beta.40/css/uikit-rtl.css" />
 	<link rel="stylesheet" type="text/css" href="uikit-3.0.0-beta.40/css/uikit-rtl.min.css" />
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" /> -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
   <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="uikit-3.0.0-beta.40/js/uikit.js"></script>
 	<script src="uikit-3.0.0-beta.40/js/uikit.min.js"></script>
 	<script src="uikit-3.0.0-beta.40/js/uikit-icons.js"></script>
 	<script src="uikit-3.0.0-beta.40/js/uikit-icons.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script> -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<meta name="description" content="This website houses a digital archive of 6000 images of New Vision magazine, published in Uganda.">
 	<meta name="keywords" content="geography, university of texas, beauty, fashion, national science foundation, archive">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body id="indexBody">
+<body id="indexBody" class="uk-animation-fade">
+	<div style="display: none" id="hideAll">&nbsp;</div>
   <header>
     <div>
     <nav class="uk-navbar-container" uk-navbar>
@@ -35,12 +32,40 @@
 			<ul class="uk-navbar-nav">
 				<li class="uk-active"><a href="index.html">Home</a></li>
 				<li><a href="#second-column">About</a></li>
-				<li><a href="archive.html">Archive</a></li>
+				<li id="archiveLink" class="hidden"><a href="archive.html">Archive</a></li>
+				<li id="adminLink" class="hidden"><a href="admin_console.html">My Account</a></li>
 			</ul>
     </div>
     <div class="accountLoginContainer">
       <img src="accountLogo.png" alt="" class="accountLogo">
-      <p>Account Login</p>
+      <p><a id="signInLink" href="#modal-example" uk-toggle>Login</a></p>
+			<div id="modal-example" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+					<container id="signInContainer">
+ 				  <form>
+ 				    <fieldset class="uk-fieldset">
+
+ 				        <legend class="uk-legend">Sign In</legend>
+
+ 				        <div class="uk-margin">
+ 				            <input class="uk-input" id="txtEmail" type="email" placeholder="Email">
+ 				        </div>
+
+ 				        <div class="uk-margin">
+ 				            <input class="uk-input" id="txtPassword" type="password" placeholder="Password">
+ 				        </div>
+
+ 				        <div class="uk-margin">
+ 				            <button id="btnLogin" class="uk-button uk-button-default uk-button-primary btn btn-action">Log In</button>
+ 				            <button id="btnSignUp" class="uk-button uk-button-default uk-button-primary btn btn-secondary">Sign Up</button>
+ 				            <button id="btnLogout" class="uk-button uk-button-default uk-button-primary btn btn-action hidden">Log Out</button>
+ 				        </div>
+
+ 				    </fieldset>
+ 				  </form>
+ 				</container>
+        </div>
+      </div>
       <div>
 		</nav>
   </div>
@@ -140,7 +165,8 @@
     </section>
 		<div class="staticParallax3"></div>
 		<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-	  <script src="scripts.js"></script>
+	  <script src="userLogin/scripts.js"></script>
+		
 </body>
 
 <footer>

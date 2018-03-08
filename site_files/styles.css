@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Fjalla+One|Gravitas+One|Montserrat|Josefin+Sans|Abril+Fatface|Comfortaa|Fredoka+One|Passion+One|Shrikhand');
 
+body {
+    display: none;
+}
+
 html, body {height: 100%;}
 h1 {color: #092072 !important; font-family: "Comfortaa" , "Times New Roman", Times, serif !important; }
 /* #c16886 */
@@ -7,7 +11,7 @@ nav {background-color: white !important;}
 img {image-orientation: from-image !important;}
 p, a {font-family: "Montserrat", "Arial", "Times New Roman" !important;}
 ul li {font-family: "Montserrat" !important;}
-.inputStyle {border: 1px solid #c4c4c4; border-radius: 5px; background-color: #fff; padding: 3px 5px; box-shadow: inset 0 3px 6px rgba(0,0,0,0.1); width: 190px; height: 25px;
+.inputStyle {border: 1px solid #c4c4c4; border-radius: 5px; background-color: #fff; padding: 3px 5px; box-shadow: inset 0 3px 6px rgba(0,0,0,0.1); height: 25px;
 }
 hr.style2 {border-top: 3px double #8c8b8b !important;}
 .utlogo {display: flex; justify-content: left; width: 220px; height: 50px; margin-left: 30px; margin-top: 10px; margin-bottom: 5px;}
@@ -30,7 +34,7 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
 .tint {z-index: 1; position: absolute; top: 65px; left: 0px; height: 260px; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center;}
 .white-text {color: white;}
 .dark-background {background-color: #232323 !important;}
-.hidden {display: none;}
+.hidden {display: none !important;}
 /* .imgThumbnail {width: 550px; height: 220px;} */
 .newResultContainer {}
 .web_archive {font-family: "Abril Fatface", "Times New Roman", Times !important; font-size: 4.5em !important; display: inline-block !important; white-space: wrap !important; width: 40%;}
@@ -39,6 +43,7 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
 
 /* .container {padding: 1rem;} */
 /* #archiveContainer {display: flex !important;} */
+#signInLink{color: #092072 !important;}
 #collectiveWebsite {color: #e52441 !important;}
 #descriptionAside {font-family: "Montserrat";}
 #switcher1 li {display: inline-block; white-space: nowrap;}
@@ -60,7 +65,7 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
 #collectiveWebsitePink {color: #bb5522;}
 #searchBar {width: 30%; -webkit-transition: width 0.4s ease-in-out; transition: width 0.4s ease-in-out;}
 /* #searchBar:focus {width: 30%;} */
-#searchSubmit {height: 35px;}
+#searchSubmit {height: 40px;}
 
 [type="date"] {
   background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
@@ -75,7 +80,7 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
   font-family: "Montserrat";
 }
 
-input[type=submit] {
+/* input[type=submit] {
     padding:5px 15px;
     background:#ccc;
     border:0 none;
@@ -83,7 +88,7 @@ input[type=submit] {
     -webkit-border-radius: 5px;
     border-radius: 5px;
     font-family: "Montserrat";
-}
+} */
 
 #container {
   width: 820px;

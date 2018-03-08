@@ -1,14 +1,15 @@
-const config = {
-  apiKey: "AIzaSyBEuz8CjkppEfcz-i1el4YgzS6VudEdqnY",
-  authDomain: "q1-project-77b24.firebaseapp.com",
-  databaseURL: "https://q1-project-77b24.firebaseio.com",
-  projectId: "q1-project-77b24",
-  storageBucket: "q1-project-77b24.appspot.com",
-  messagingSenderId: "323670236834"
-};
+// const config = {
+//   apiKey: "AIzaSyBEuz8CjkppEfcz-i1el4YgzS6VudEdqnY",
+//   authDomain: "q1-project-77b24.firebaseapp.com",
+//   databaseURL: "https://q1-project-77b24.firebaseio.com",
+//   projectId: "q1-project-77b24",
+//   storageBucket: "q1-project-77b24.appspot.com",
+//   messagingSenderId: "323670236834"
+// };
+
 var archiveResultsContainer = document.getElementsByClassName("archiveResultsContainer")[0];
 archiveResultsContainer.setAttribute("uk-scrollspy", "target: > div; cls:uk-animation-fade; delay: 500")
-firebase.initializeApp(config);
+// firebase.initializeApp(config);
 
 //reference image storage and doc elements
 var ref = firebase.database().ref('images').orderByChild('imageDate');
@@ -62,7 +63,8 @@ function returnResults(){
     newImageResult.addEventListener("click", function(ev){
       setTimeout(function(){
         var rotated = false;
-        var allImages = document.getElementsByClassName("uk-active")[2].firstChild;
+        console.log(document.getElementsByClassName("uk-active")[1].firstChild);
+        var allImages = document.getElementsByClassName("uk-active")[1].firstChild;
         allImages.addEventListener("click", function(ev){
           var deg = rotated ? 0 : 90;
 
@@ -225,3 +227,7 @@ searchButton.addEventListener('click', function(event){
   console.log("THIS THANG");
  }
 })
+
+$(function () {
+    $('body').show();
+});

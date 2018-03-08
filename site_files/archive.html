@@ -7,39 +7,64 @@
 	<link rel="stylesheet" type="text/css" href="uikit-3.0.0-beta.40/css/uikit.css" />
 	<link rel="stylesheet" type="text/css" href="uikit-3.0.0-beta.40/css/uikit-rtl.css" />
 	<link rel="stylesheet" type="text/css" href="uikit-3.0.0-beta.40/css/uikit-rtl.min.css" />
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" /> -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 	<script src="uikit-3.0.0-beta.40/js/uikit.js"></script>
 	<script src="uikit-3.0.0-beta.40/js/uikit.min.js"></script>
 	<script src="uikit-3.0.0-beta.40/js/uikit-icons.js"></script>
 	<script src="uikit-3.0.0-beta.40/js/uikit-icons.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script> -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<meta name="description" content="This website houses a digital archive of 6000 images of New Vision magazine, published in Uganda.">
 	<meta name="keywords" content="geography, university of texas, beauty, fashion, national science foundation, archive">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body class="uk-animation-fade">
+	<div style="display: none" id="hideAll">&nbsp;</div>
   <header>
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
       <div>
-      <img src="geographyLogo.png" alt="" class="utlogo">
+       <img src="geographyLogo.png" alt="" class="utlogo">
       </div>
       <div class="uk-navbar-center">
-      <ul class="uk-navbar-nav">
+       <ul class="uk-navbar-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#second-column">About</a></li>
-        <li class="uk-active"><a href="archive.html">Archive</a></li>
+				<li id="archiveLink" class="hidden"><a href="archive.html">Archive</a></li>
+				<li id="adminLink" class="hidden"><a href="admin_console.html">My Account</a></li>
         <!-- <li><a href="contact.html">Contact</a></li> -->
-      </ul>
-    </div>
+       </ul>
+      </div>
     <div class="accountLoginContainer">
       <img src="accountLogo.png" alt="" class="accountLogo">
-      <p>Account Login<p>
+      <p><a id="signInLink" href="#modal-example" uk-toggle>Login</a><p>
+				<div id="modal-example" uk-modal>
+	        <div class="uk-modal-dialog uk-modal-body">
+					 <container id="signInContainer">
+	 				  <form>
+	 				    <fieldset class="uk-fieldset">
+
+	 				        <legend class="uk-legend">Sign In</legend>
+
+	 				        <div class="uk-margin">
+	 				            <input class="uk-input" id="txtEmail" type="email" placeholder="Email">
+	 				        </div>
+
+	 				        <div class="uk-margin">
+	 				            <input class="uk-input" id="txtPassword" type="password" placeholder="Password">
+	 				        </div>
+
+	 				        <div class="uk-margin">
+	 				            <button id="btnLogin" class="uk-button uk-button-default btn btn-action">Log In</button>
+	 				            <button id="btnSignUp" class="uk-button uk-button-default btn btn-secondary">Sign Up</button>
+	 				            <button id="btnLogout" class="uk-button uk-button-default btn btn-action hidden">Log Out</button>
+	 				        </div>
+
+	 				    </fieldset>
+	 				  </form>
+	 				 </container>
+	        </div>
+	      </div>
       <div>
     </nav>
   </header>
@@ -54,82 +79,171 @@
 
 
   <section id="archiveContainer" style="">
-    <div id="archiveSearchContainer" >
-		 <form id="archiveSearchForm">
-			 <!-- <div class="searchBarDiv"> -->
-			  <label for="startDate" style="font-size: 1em; font-family: Montserrat;">Start date: </label>
-        <input type="date" id="startDate" class="inputStyle" style="margin: 0 7% 0 10px;">
-        </input>
-		  <!-- </div> -->
-			<!-- <div class="searchBarDiv"> -->
-			 <label for="endDate" style="font-size: 1em; font-family: Montserrat;">End date: </label>
-       <input type="date" id="endDate" class="inputStyle" style="margin: 0 7% 0 10px;">
-       </input>
-		  <!-- </div> -->
-			<!-- <div class="searchBarDiv"> -->
-       <input type="text" id="searchBar" placeholder="Search..." value="" class="inputStyle" style="margin-right: 5px;">
-       </input>
-		  <!-- </div> -->
-			<!-- <div class="searchBarDiv"> -->
-       <input id="searchSubmit" type="submit" value="Search">
-		   </input>
-	    <!-- </div> -->
-		 </form>
-    </div>
-		<div class="archiveResultsContainer">
 
+    <div id="archiveSearchContainer">
+
+		 <form id="archiveSearchForm">
+			  <label for="startDate" style="font-size: 1em; font-family: Montserrat;">Start date: </label>
+        <input type="date" id="startDate" class="uk-input" style="margin: 0 4% 0 10px; width: 12%;">
+        </input>
+			 <label for="endDate" style="font-size: 1em; font-family: Montserrat;">End date: </label>
+       <input type="date" id="endDate" class="uk-input" style="margin: 0 4% 0 10px; width: 12%;">
+       </input>
+       <input type="text" id="searchBar" placeholder="Search..." value="" class="uk-input" style="margin-right: 5px;">
+       </input>
+       <input class="uk-input" id="searchSubmit" type="submit" value="Search" style="width: 6%; margin-right: 4%;">
+			<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #imageAddForm">Add Images</button>
+		  </form>
+		 </div>
+
+		<div class="archiveResultsContainer" id="archiveResultsContainer">
 		</div>
+
   </section>
 
+	<div id="imageAddForm" uk-modal>
+		<div class="uk-modal-dialog uk-modal-body">
+
+			<fieldset class="uk-fieldset">
+
+			 <legend class="uk-legend">Add Images to Archive</legend><br>
+        <!-- <div class="js-form">
+					<div id="js-login-data">
+							<div id="emailContainer" class="uk-margin">
+								<label for="js-email">Email</label>
+								<input type="email" id="js-email" class="uk-input form-control"/>
+							</div>
+							<div class="uk-margin">
+								<label for="js-password">Password</label>
+								<input type="password" id="js-password" class="uk-input form-control"/>
+							</div>
+					</div>
+
+					<div class="uk-margin">
+						<label for="js-image-id">Image ID</label>
+						<input type="text" id="js-image-id" class="uk-input form-control"/>
+					</div>
+
+					<div class="uk-margin">
+						<label for="js-image-date">Image Date</label>
+						<input type="date" id="js-image-date" class="uk-input form-control"/>
+					</div>
+
+					<div class="uk-margin">
+						<label for="js-image-keywords">Keywords (separated by spaces)</label>
+						<input type="text" id="js-image-keywords" class="uk-input form-control"/>
+					</div>
+
+					<div class="uk-margin">
+						<label for="js-image-upload">Upload Image</label>
+						<input type="file" value="upload" id="js-image-upload" class="uk-input form-control"/>
+					</div>
+
+					<div class="uk-margin">
+							<button id="js-submit" class="uk-button uk-button-default form-control">Submit</button>
+					</div>
+        </div> -->
+				<div class="container">
+			    <div class="row">
+			      <div class="col-sx-12">
+			        <form class="js-form">
+			      <div id="js-login-data">
+			          <div id="emailContainer" class="form-group">
+			            <label for="js-email">Email</label>
+			            <input type="email" id="js-email" class="form-control"/>
+			          </div>
+			          <div class="form-group">
+			            <label for="js-password">Password</label>
+			            <input type="password" id="js-password" class="form-control"/>
+			          </div>
+			      </div>
+			          <div class="form-group">
+			            <label for="js-image-id">Image ID</label>
+			            <input type="text" id="js-image-id" class="form-control"/>
+			          </div>
+			          <div class="form-group">
+			            <label for="js-image-date">Image Date</label>
+			            <input type="date" id="js-image-date" class="form-control"/>
+			          </div>
+			          <div class="form-group">
+			            <label for="js-image-keywords">Keywords (separated by spaces)</label>
+			            <input type="text" id="js-image-keywords" class="form-control"/>
+			          </div>
+			          <div class="form-group">
+			            <label for="js-image-upload">Upload Image</label>
+			            <input type="file" value="upload" id="js-image-upload" class="form-control"/>
+			          </div>
+			          </div>
+			          <button id="js-submit" class="btn btn-primary">Submit</button>
+			        </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			</fieldset>
+		</div>
+	</div>
+	<!-- <section>
+	<div class="container">
+    <div class="row">
+      <div class="col-sx-12">
+        <form class="js-form">
+      <div id="js-login-data">
+          <div id="emailContainer" class="form-group">
+            <label for="js-email">Email</label>
+            <input type="email" id="js-email" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="js-password">Password</label>
+            <input type="password" id="js-password" class="form-control"/>
+          </div>
+      </div>
+          <div class="form-group">
+            <label for="js-image-id">Image ID</label>
+            <input type="text" id="js-image-id" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="js-image-date">Image Date</label>
+            <input type="date" id="js-image-date" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="js-image-keywords">Keywords (separated by spaces)</label>
+            <input type="text" id="js-image-keywords" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="js-image-upload">Upload Image</label>
+            <input type="file" value="upload" id="js-image-upload" class="form-control"/>
+          </div>
+          </div>
+          <button id="js-submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
 <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-<script>
-// Initialize Firebase
-	// var config = {
-	// 	apiKey: "AIzaSyBEuz8CjkppEfcz-i1el4YgzS6VudEdqnY",
-	// 	authDomain: "q1-project-77b24.firebaseapp.com",
-	// 	databaseURL: "https://q1-project-77b24.firebaseio.com",
-	// 	projectId: "q1-project-77b24",
-	// 	storageBucket: "q1-project-77b24.appspot.com",
-	// 	messagingSenderId: "323670236834"
-	// };
-	// firebase.initializeApp(config);
-</script>
+<!-- <script>
+const config = {
+  apiKey: "AIzaSyBEuz8CjkppEfcz-i1el4YgzS6VudEdqnY",
+  authDomain: "q1-project-77b24.firebaseapp.com",
+  databaseURL: "https://q1-project-77b24.firebaseio.com",
+  projectId: "q1-project-77b24",
+  storageBucket: "q1-project-77b24.appspot.com",
+  messagingSenderId: "323670236834"
+};
+firebase.initializeApp(config);
+</script> -->
+<script src="userLogin/scripts.js"></script>
 <script src="scripts.js"></script>
+
+<!-- <script src="add_image_form.js"></script> -->
 </body>
 
 <footer>
-  <section class="contactContainer">
-		<div class="contact">
 
-		</div>
-    <div class="contactEmails">
-      <span>
-        <p><strong>Dr. Caroline Faria</strong> <br><br>
-        Assistant Professor <br>
-        Department of Geography & the Environment <br>
-        University of Texas <br>
-        cvfaria@austin.utexas.edu
-			</p>
-      </span>
-    </div>
-		<div class="webMasterEmail">
-			<span>
-			<p><strong>Hunter Jefferson</strong><br><br>
-			Web Developer & <br>
-			Research Assistant<br>
-			hunterjefferson@utexas.edu<br>
-			&nbsp;
-		</p>
-		</span>
-		</div>
-    <div class="contactLinks">
-      <h2 style="font-family: Comfortaa;">Visit the Collective's <a id="collectiveWebsitePink" href="https://universityoftexas.wixsite.com/femgeogcollective">website</a> to learn more about our work</h2>
-      <span>
-
-      </span>
-    </div>
-  </section>
-  <section class="copyright" style="">
+  <section class="copyright" style="background-color: white; margin-top: 30px;">
   <div class="copyrightText">&copy; 2018 UT Feminist Geography Collective. All rights reserved. | Austin, TX </div>
  </section>
 </footer>
