@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Anton|Comfortaa|Fjalla+One|Gravitas+One|Montserrat|Josefin+Sans|Abril+Fatface|Comfortaa|Fredoka+One|Passion+One|Shrikhand');
 
-body {
-    display: none;
-}
-
+body {display: none;}
 html, body {height: 100%;}
 h1 {color: #092072 !important; font-family: "Comfortaa" , "Times New Roman", Times, serif !important; }
 /* #c16886 */
@@ -11,8 +8,7 @@ nav {background-color: white !important;}
 img {image-orientation: from-image !important;}
 p, a {font-family: "Montserrat", "Arial", "Times New Roman" !important;}
 ul li {font-family: "Montserrat" !important;}
-.inputStyle {border: 1px solid #c4c4c4; border-radius: 5px; background-color: #fff; padding: 3px 5px; box-shadow: inset 0 3px 6px rgba(0,0,0,0.1); height: 25px;
-}
+.inputStyle {border: 1px solid #c4c4c4; border-radius: 5px; background-color: #fff; padding: 3px 5px; box-shadow: inset 0 3px 6px rgba(0,0,0,0.1); height: 25px;}
 hr.style2 {border-top: 3px double #8c8b8b !important;}
 .utlogo {display: flex; justify-content: left; width: 220px; height: 50px; margin-left: 30px; margin-top: 10px; margin-bottom: 5px;}
 .accountLogo {display: flex; justify-content: left; width: 20px; height: 20px; margin-right: 6px;}
@@ -39,8 +35,11 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
 .newResultContainer {}
 .web_archive {font-family: "Abril Fatface", "Times New Roman", Times !important; font-size: 4.5em !important; display: inline-block !important; white-space: wrap !important; width: 40%;}
 .magImageBackground {background-image: url("homeBackground.jpeg");}
+.uk-button-primary {background-color: #e52441 !important; }
+.uk-legend {font-family: "Comfortaa";}
+.uk-input {font-family: "Montserrat" !important;}
+.uk-button {font-family: "Montserrat" !important;}
 /* .searchBarDiv {margin-right: 70px;} */
-
 /* .container {padding: 1rem;} */
 /* #archiveContainer {display: flex !important;} */
 #signInLink{color: #092072 !important;}
@@ -79,16 +78,6 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
   opacity: 0;
   font-family: "Montserrat";
 }
-
-/* input[type=submit] {
-    padding:5px 15px;
-    background:#ccc;
-    border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    font-family: "Montserrat";
-} */
 
 #container {
   width: 820px;

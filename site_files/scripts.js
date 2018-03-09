@@ -206,25 +206,27 @@ returnResults();
 
 //filter results according to user inputed start and end date
 searchButton.addEventListener('click', function(event){
-  // var startDate = new Date(document.getElementById('startDate').value).getTime();
-  // var endDate = new Date(document.getElementById('endDate').value).getTime();
   var startDate = document.getElementById('startDate').value;
   var endDate = document.getElementById('endDate').value;
   var searchEntry = document.getElementById('searchBar');
   event.preventDefault();
-  // ref = firebase.database().ref('images').orderByChild('dateInt').startAt(startDate).endAt(endDate);
+  // console.log(startDate.value);
+  // console.log(endDate.value);
+  if (startDate != "" && endDate == ""){
+    ref = firebase.database().ref('images').orderByChild('imageDate').startAt(startDate);
+  } else if (startDate == "" && endDate != "") {
+    ref = firebase.database().ref('images').orderByChild('imageDate').endAt(endDate);
+  } else {
   ref = firebase.database().ref('images').orderByChild('imageDate').startAt(startDate).endAt(endDate);
+  };
+  // ref = firebase.database().ref('images').orderByChild('imageDate').startAt(startDate).endAt(endDate);
   let oldResults = document.getElementsByClassName("archiveResultsContainer")[0];
   var tester = document.getElementsByClassName('newResultContainer');
   oldResults.innerHTML = "";
   if(searchEntry.value != ""){
     returnSearchResults();
-    console.log(searchEntry.value);
-    console.log("nope");
   } else {
   returnResults();
-  console.log(searchEntry.value);
-  console.log("THIS THANG");
  }
 })
 
