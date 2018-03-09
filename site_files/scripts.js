@@ -178,17 +178,21 @@ function returnSearchResults(){
      var imageId = images[k].imageID;
      var imageDate = images[k].imageDate;
      var imageKeywords = images[k].imageKeywords;
+     var searchEntryValue = searchEntry.value.split(" ");
      for(let m=0; m<imageKeywords.length; m++){
-       if(imageKeywords[m] == searchEntry.value){
-         getImage(imageId,imageDisplay,imageDate)
-         function getImage(id, display, date){
-           firebase.storage().ref().child('images/' + display).getDownloadURL()
-           .then( (url) =>{
-             addImageResult(url, id, date)
-           })
-           .catch(function(error) {
-           });
+       for(let x=0; x<searchEntryValue.length; x++){
+         if(imageKeywords[m] == searchEntryValue[x]){
+           getImage(imageId,imageDisplay,imageDate)
+           function getImage(id, display, date){
+             firebase.storage().ref().child('images/' + display).getDownloadURL()
+             .then( (url) =>{
+               addImageResult(url, id, date)
+             })
+             .catch(function(error) {
+             });
+           }
          }
+         break;
        }
      }
     }
@@ -216,9 +220,11 @@ searchButton.addEventListener('click', function(event){
     ref = firebase.database().ref('images').orderByChild('imageDate').startAt(startDate);
   } else if (startDate == "" && endDate != "") {
     ref = firebase.database().ref('images').orderByChild('imageDate').endAt(endDate);
-  } else {
+  } else if (startDate != "" && endDate != ""){
   ref = firebase.database().ref('images').orderByChild('imageDate').startAt(startDate).endAt(endDate);
-  };
+  } else {
+  ref = firebase.database().ref('images').orderByChild('imageDate');
+  }
   // ref = firebase.database().ref('images').orderByChild('imageDate').startAt(startDate).endAt(endDate);
   let oldResults = document.getElementsByClassName("archiveResultsContainer")[0];
   var tester = document.getElementsByClassName('newResultContainer');
