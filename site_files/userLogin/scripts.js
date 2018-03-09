@@ -54,6 +54,11 @@ btnSignUp.addEventListener('click', ev => {
   promise.catch(ev => console.log(e.message));
 })
 
+var logOutButton = document.getElementById("signInLink");
+logOutButton.addEventListener('click', ev => {
+  ev.preventDefault();
+  firebase.auth().signOut();
+})
 btnLogout.addEventListener('click', ev => {
   ev.preventDefault();
   firebase.auth().signOut();
