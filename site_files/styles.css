@@ -5,6 +5,7 @@ html, body {height: 100%;}
 h1 {color: #092072 !important; font-family: "Comfortaa" , "Times New Roman", Times, serif !important; }
 /* #c16886 */
 nav {background-color: white !important;}
+label {font-family: "Montserrat" !important;}
 img {image-orientation: from-image !important;}
 p, a {font-family: "Montserrat", "Arial", "Times New Roman" !important;}
 ul li {font-family: "Montserrat" !important;}
@@ -24,9 +25,9 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
 .copyrightText {display: flex; justify-content: center; align-items: center; font-size: 0.9em}
 .darkGrayText {text-decoration-color: red;}
 .uk-subnav-pill .uk-active a {background-color: white !important; color: black !important;}
-.staticParallax { background-image: url("ugandaFashion3.png"); height: 100%; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
-.staticParallax2 { background-image: url("homeBackground.jpeg"); height: 300px; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; justify-content: center; align-items: center;}
-.staticParallax3 { background-image: url("ugandaFashion.jpg"); height: 70%; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
+.staticParallax { background-image: url("ugandaFashion3.png"); height: 100%; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.5);}
+.staticParallax2 { background-image: url("homeBackground.jpeg"); height: 300px; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; justify-content: center; align-items: center; box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,.5);}
+.staticParallax3 { background-image: url("ugandaFashion.jpg"); height: 70%; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.5);}
 .tint {z-index: 1; position: absolute; top: 65px; left: 0px; height: 260px; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center;}
 .white-text {color: white;}
 .dark-background {background-color: #232323 !important;}
@@ -52,7 +53,7 @@ hr.style2 {border-top: 3px double #8c8b8b !important;}
 #archiveSearchContainer {display: flex; justify-content: center; align-items: center; height: 50px;}
 .archiveResultsContainer {display: grid; grid-template-columns: repeat(3, 1fr); grid-column-gap: 50px; grid-row-gap: 50px; max-width: 100%; padding: 10px 10px 10px 10px;}
 #web_archive2 {font-family: "Comfortaa", "Times New Roman", Times !important; font-size: 1.5em !important; display: inline-block !important; white-space: wrap !important; width: 60%; color: #e52441 !important;}
-#homeDescriptionSection {background-color: #232323; width: 100%; display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;}
+#homeDescriptionSection {background-color: #232323; width: 100%; display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px; box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.5);}
 #homeDescription{display: flex; width: 70%; justify-content: center; color: gray; font-size: 1.2em; padding-top: 80px; padding-bottom: 80px;}
 #homeImageSection {height: 100%; display: flex; align-items: flex-start;}
 #aboutTextSection { width: 74%; margin-left: 13%; display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;}
